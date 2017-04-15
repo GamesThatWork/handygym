@@ -9,7 +9,7 @@ body {
 	height: 50px;
 	border-radius: 50px;
 	-webkit-radius: 50px;
-	background-color: blue;
+	background-color: red;
 }
 
 .gauge {
@@ -27,7 +27,7 @@ body {
     margin: 40px;
     padding: 10px;
 	border: 8px solid lightblue;
-	background-color: indigo;
+	background-color: 0x002;
 	width: 1200px;
 }
 
