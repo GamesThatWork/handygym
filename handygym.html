@@ -15,17 +15,52 @@
 
     <div id="sphere"></div>
 
-	<div id='panel' >
-		<h1>IMU  Instrument Panel</h1>
-		<hr/>
-		<ul>
-			<li>acceleration x: <span class="gauge" id="accelerationX"></span>g</li>
-			<li>acceleration y: <span class="gauge" id="accelerationY"></span>g</li>
-			<li>acceleration z: <span class="gauge" id="accelerationZ"></span>g</li>
-			<li>rotation alpha: <span class="gauge" id="rotationAlpha"></span>degree</li>
-			<li>rotation beta:  <span class="gauge" id="rotationBeta"></span>degree</li>
-			<li>rotation gamma: <span class="gauge" id="rotationGamma"></span>degree</li>
-		</ul>
-	</div>
+	<table id='panel' >
+		<tr>
+			<th colspan='4'>IMU  Instrument Panel</th>
+		</tr>
+		<tr>
+			<th> axis </th>
+			<th> force</th>
+			<th> w grav</th>
+			<th> kalman</th>
+		</tr>	
+		<tr>
+			<td>X accel		</td>
+			<td class="gauge" id="accelerationX"></td>
+			<td class="gauge" id="accelGravityX"></td>
+			<td class="gauge" id="accelKalmanX"></td>
+		</tr>	
+		<tr>
+			<td>Y accel		</td>
+			<td class="gauge" id="accelerationY"></td>
+			<td class="gauge" id="accelGravityY"></td>
+			<td class="gauge" id="accelKalmanY"></td>
+		</tr>	
+		<tr>
+			<td>Z accel		</td>
+			<td class="gauge" id="accelerationZ"></td>
+			<td class="gauge" id="accelGravityZ"></td>
+			<td class="gauge" id="accelKalmanZ"></td>
+		</tr>	
+		<tr>
+			<td>Alpha rot	</td>
+			<td class="gauge" id="rotationAlpha"></td>
+			<td class="gauge" id="rotationAlpha"></td>
+			<td class="gauge" id="rotKalmanAlpha"></td>
+		</tr>	
+		<tr>
+			<td>Beta rot	</td>
+			<td class="gauge" id="rotationBeta"></td>
+			<td class="gauge" id="rotationBeta"></td>
+			<td class="gauge" id="rotKalmanBeta"></td>
+		</tr>	
+		<tr>
+			<td>Gamma rot	</td>
+			<td class="gauge" id="rotationGamma"></td>
+			<td class="gauge" id="rotationGamma"></td>
+			<td class="gauge" id="rotKalmanGamma"></td>
+		</tr>	
+	</table>
 </div>
 </body>

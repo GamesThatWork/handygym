@@ -11,9 +11,12 @@ if (window.DeviceMotionEvent != undefined) {
 		ax = event.accelerationIncludingGravity.x * 5;
 		ay = event.accelerationIncludingGravity.y * 5;
 		//document.getElementById("accelerationX").innerHTML = e.accelerationIncludingGravity.x;
-		$( "#accelerationX" ).html( format( e.accelerationIncludingGravity.x ));
-		$( "#accelerationY" ).html( format( e.accelerationIncludingGravity.y ));
-		$( "#accelerationZ" ).html( format( e.accelerationIncludingGravity.z ));
+		$( "#accelerationX" ).html( format( e.acceleration.x ));
+		$( "#accelerationY" ).html( format( e.acceleration.y ));
+		$( "#accelerationZ" ).html( format( e.acceleration.z ));
+		$( "#accelGravityX" ).html( format( e.accelerationIncludingGravity.x ));
+		$( "#accelGravityY" ).html( format( e.accelerationIncludingGravity.y ));
+		$( "#accelGravityZ" ).html( format( e.accelerationIncludingGravity.z ));
 
 		if ( e.rotationRate ) {
 			$( "#rotationAlpha" ).html( format( e.rotationRate.alpha ));
