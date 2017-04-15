@@ -21,14 +21,14 @@ body {
 	border: thin solid black;
 	background-color: lightyellow;
 	width: 235px;
-} 
+}
 
 #panel {
     margin: 40px;
     padding: 10px;
 	border: 8px solid lightblue;
 	background-color: indigo;
-	width: 40%;
+	width: 600px;
 }
 
 h1 {

@@ -7,7 +7,7 @@ var x = 0, y = 0,
 var sphere = document.getElementById("sphere");
 
 if (window.DeviceMotionEvent != undefined) {
-	window.ondevicemotion = function(e) { 
+	window.ondevicemotion = function(e) {
 		ax = event.accelerationIncludingGravity.x * 5;
 		ay = event.accelerationIncludingGravity.y * 5;
 		//document.getElementById("accelerationX").innerHTML = e.accelerationIncludingGravity.x;
@@ -16,10 +16,10 @@ if (window.DeviceMotionEvent != undefined) {
 		$( "#accelerationZ" ).html( format( e.accelerationIncludingGravity.z ));
 
 		if ( e.rotationRate ) {
-			document.getElementById("rotationAlpha").innerHTML = e.rotationRate.alpha;
-			document.getElementById("rotationBeta").innerHTML = e.rotationRate.beta;
-			document.getElementById("rotationGamma").innerHTML = e.rotationRate.gamma;
-		}		
+			$( "#rotationAlpha" ).html( format( e.rotationRate.alpha ));
+			$( "#rotationBeta"  ).html( format( e.rotationRate.beta ));
+			$( "#rotationGamma" ).html( format( e.rotationRate.gamma ));
+			}		
 	}
 
 	setInterval( function() {
