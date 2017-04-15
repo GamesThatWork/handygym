@@ -7,7 +7,7 @@ var x = 0, y = 0,
 var sphere = document.getElementById("sphere");
 
 if (window.DeviceMotionEvent != undefined) {
-	window.ondevicemotion = function(e) {
+	window.ondevicemotion = function(e) { 
 		ax = event.accelerationIncludingGravity.x * 5;
 		ay = event.accelerationIncludingGravity.y * 5;
 		//document.getElementById("accelerationX").innerHTML = e.accelerationIncludingGravity.x;
@@ -39,14 +39,17 @@ if (window.DeviceMotionEvent != undefined) {
 		boundingBoxCheck();
 		
 		$("#sphere" ).css( { "top": y+"px", "left": x+"px"});
+	//	$("#panel" ).css( { "top": y+"px", "left": x+"px"});
 		
 	}, 25);
 } 
 
 
 function format( number ){ 
-		return  Math.floor(number*100+.5);
-	
+		s= " "+Math.floor(number*100+.5)+" ";
+		while( s.length< 8 )  
+			s ="&nbsp;"+s;
+		return s;
 }
 
 function boundingBoxCheck(){
