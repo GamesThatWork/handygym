@@ -19,8 +19,7 @@ body {
 	color: black;
     margin: 4px;
 	border: thin solid black;
-	background-color: lightyellow;
-	width: 235px;
+	background-color: lightyellow; 
 }
 
 #panel {
@@ -28,7 +27,6 @@ body {
     padding: 10px;
 	border: 8px solid lightblue;
 	background-color: 0x002;
-	width: 1200px;
 }
 
 h1 {
