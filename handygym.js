@@ -1,13 +1,24 @@
 
 
-var x = 0, y = 0,
+var  x = 0,  y = 0,
     vx = 0, vy = 0,
 	ax = 0, ay = 0;
-	
+
 var sphere = document.getElementById("sphere");
+
+
+var timeStart= performance.now();
+var frames =0, fps=0, msec=0;
+
+
 
 if (window.DeviceMotionEvent != undefined) {
 	window.ondevicemotion = function(e) {
+		
+		frames++;
+		msec = performance.now() -timeStart;
+		fps = 1000.0 * frames / msec;
+				
 		ax = event.accelerationIncludingGravity.x * 5;
 		ay = event.accelerationIncludingGravity.y * 5;
 		//document.getElementById("accelerationX").innerHTML = e.accelerationIncludingGravity.x;
@@ -17,6 +28,9 @@ if (window.DeviceMotionEvent != undefined) {
 		$( "#accelGravityX" ).html( format( e.accelerationIncludingGravity.x ));
 		$( "#accelGravityY" ).html( format( e.accelerationIncludingGravity.y ));
 		$( "#accelGravityZ" ).html( format( e.accelerationIncludingGravity.z ));
+		$( "#accelKalmanX" ).html( format( frames/100 ));
+		$( "#accelKalmanY" ).html( format( msec  /100000 ));
+		$( "#accelKalmanZ" ).html( format( fps/100 ));
 
 		if ( e.rotationRate ) {
 			$( "#rotationAlpha" ).html( format( e.rotationRate.alpha ));
