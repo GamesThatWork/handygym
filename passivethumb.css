@@ -1,0 +1,34 @@
+body {
+	font-family: helvetica, arial, sans serif;
+    background-color: darkblue;
+	color: white;
+}
+.fingerpad {
+	position: absolute;	
+	width: 70px;
+	height: 70px;
+	border-radius: 70px;
+	border: 2px solid white;
+	-webkit-radius: 50px;
+	background-color: white;
+	opacity: 0.55;
+}
+
+.fingerpad :hover{
+	opacity: 0.85;
+	width: 90px;
+	height: 90px;
+	border-radius: 90px;
+}
+
+
+h1 {
+    color: lightblue;
+    font-size: 24px;
+   margin-left: 20px;
+	
+}
+p {
+    color: orange;
+    margin-left: 20px;
+}
